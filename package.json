@@ -1,0 +1,18 @@
+{
+  "name": "path-easing",
+  "version": "1.0.0",
+  "description": "Easing function based on svg path",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "easing",
+    "animation",
+    "tween",
+    "path",
+    "svg"
+  ],
+  "author": "Bruno Lourenco",
+  "license": "MIT"
+}
