@@ -20,13 +20,14 @@
 //   The width of the assumed viewBox.
 //
 // Inspired by Oleg Solomka’s work on http://mojs.io/
+
 function pathEasing(pathData, options) {
   options = options || {};
   var sampleCount = (options.samples === undefined) ? 300 : options.samples;
   var height = (options.height === undefined) ? 100 : options.height;
   var width = (options.width === undefined) ? 100 : options.width;
 
-  var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  var path = window.document.createElementNS('http://www.w3.org/2000/svg', 'path');
 
   path.setAttribute('d', pathData);
 
@@ -58,6 +59,8 @@ function pathEasing(pathData, options) {
         return ySamples[n];
       }
     }
+
+    return t;
   }
 
   // Expose some handy properties
@@ -67,6 +70,5 @@ function pathEasing(pathData, options) {
 
   return tween;
 }
-
 
 module.exports = pathEasing;

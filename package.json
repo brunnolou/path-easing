@@ -1,6 +1,6 @@
 {
   "name": "path-easing",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Easing function based on svg path",
   "main": "index.js",
   "scripts": {
