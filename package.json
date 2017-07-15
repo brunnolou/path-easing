@@ -2,17 +2,25 @@
   "name": "path-easing",
   "version": "1.2.0",
   "description": "Easing function based on svg path",
+  "repository": "brunnolou/path-easing",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "easing",
     "animation",
     "tween",
     "path",
-    "svg"
+    "svg",
+    "timing-functions"
   ],
   "author": "Bruno Lourenco",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^20.0.4"
+  },
+  "dependencies": {
+    "svgdom": "0.0.15"
+  }
 }

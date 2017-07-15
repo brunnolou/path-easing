@@ -7,6 +7,8 @@ Tween a given `t` value based on a bezier curve specified in SVG path data forma
 import pathEasing from 'path-easing';
 
 const extremeInOutEasing = pathEasing('M0,100 C40,100 50,90 50,50 C50,10 60,3 100,0', { samples: 200 });
+
+console.log(extremeInOutEasing(0.5)); // 0.0019976899246115787
 ```
 
 ### Options {
@@ -21,6 +23,7 @@ const extremeInOutEasing = pathEasing('M0,100 C40,100 50,90 50,50 C50,10 60,3 10
 * `width: ` default: 100
 
   The width of the assumed viewBox.
+
 ### }
 
 ### Sample SVG curve

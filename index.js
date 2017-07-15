@@ -21,7 +21,7 @@
 //
 // Inspired by Oleg Solomka’s work on http://mojs.io/
 
-function pathEasing(pathData, options) {
+function pathEasing(pathData, options, window = window) {
   options = options || {};
   var sampleCount = (options.samples === undefined) ? 300 : options.samples;
   var height = (options.height === undefined) ? 100 : options.height;
@@ -37,7 +37,7 @@ function pathEasing(pathData, options) {
   var xSamples = new Float64Array(sampleCount);
   var ySamples = new Float64Array(sampleCount);
 
-  var precomputeStart = window.performance.now();
+  var preComputeStart = window.performance.now();
 
   for (var i = 0; i < sampleCount; i++) {
     var point = path.getPointAtLength(sampleCountPct * i * pathLength);
@@ -45,11 +45,11 @@ function pathEasing(pathData, options) {
     ySamples[i] = 1 - point.y / height;
   }
 
-  var precomputeEnd = window.performance.now();
+  var preComputeEnd = window.performance.now();
 
   // Takes a value t between 0 and 1 and returns
   // the value of t eased based on the given bezier
-  // path’s y value
+  // path’s y value.
   function tween(t) {
     // A simple search that loops over every sample
     // each time until it finds a sample for the given
@@ -63,9 +63,9 @@ function pathEasing(pathData, options) {
     return t;
   }
 
-  // Expose some handy properties
+  // Expose some handy properties.
   tween.path = path;
-  tween.precomputeTime = precomputeEnd - precomputeStart;
+  tween.preComputeTime = preComputeEnd - preComputeStart;
   tween.sampleCount = sampleCount;
 
   return tween;
