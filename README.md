@@ -1,4 +1,5 @@
 # Path easing
+[![npm version](https://badge.fury.io/js/path-easing.svg)](https://badge.fury.io/js/keyframe)
 
 Tween a given `t` value based on a bezier curve specified in SVG path data format.
 
